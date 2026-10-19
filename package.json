@@ -1,0 +1,37 @@
+{
+  "name": "lifeos-health",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"node --watch --no-warnings server/index.js\" \"vite\"",
+    "server": "node --no-warnings server/index.js",
+    "build": "vite build",
+    "start": "npm run build && NODE_ENV=production node --no-warnings server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0",
+    "multer": "^2.4.0",
+    "sax": "^1.6.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "concurrently": "^10.0.6",
+    "date-fns": "^3.6.0",
+    "framer-motion": "^11.18.2",
+    "lucide-react": "^1.59.0",
+    "pdfjs-dist": "^4.10.38",
+    "playwright": "^1.64.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.6",
+    "recharts": "^2.15.4",
+    "tailwindcss": "^4.3.3",
+    "vite": "^6.4.4"
+  },
+  "type": "module"
+}

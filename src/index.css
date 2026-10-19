@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-page: var(--page);
+  --color-card: var(--card);
+  --color-raised: var(--raised);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-fg2: var(--fg2);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent2: var(--accent2);
+  --color-good: #0ca30c;
+  --color-warning: #fab219;
+  --color-serious: #ec835a;
+  --color-critical: #d03b3b;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+  --page: #f4f4f1;
+  --card: #fcfcfb;
+  --raised: #f0efec;
+  --line: rgba(11, 11, 11, 0.09);
+  --fg: #0b0b0b;
+  --fg2: #52514e;
+  --muted: #898781;
+  --accent: #2a78d6;
+  --accent2: #1baf7a;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --glow: rgba(42, 120, 214, 0.16);
+}
+.dark {
+  color-scheme: dark;
+  --page: #0d0d0d;
+  --card: #1a1a19;
+  --raised: #242422;
+  --line: rgba(255, 255, 255, 0.09);
+  --fg: #f0efec;
+  --fg2: #c3c2b7;
+  --muted: #898781;
+  --accent: #3987e5;
+  --accent2: #199e70;
+  --grid: #2c2c2a;
+  --axis: #383835;
+  --glow: rgba(57, 135, 229, 0.22);
+}
+
+html, body, #root { height: 100%; }
+body { background: var(--page); color: var(--fg); -webkit-font-smoothing: antialiased; }
+.tabular { font-variant-numeric: tabular-nums; }
+.grad-text { background: linear-gradient(100deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.grad-bg { background: linear-gradient(120deg, var(--accent), var(--accent2)); }
+.card-glow:hover { box-shadow: 0 10px 40px -12px var(--glow); }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 8px; border: 2px solid transparent; background-clip: padding-box; }
+input[type="range"] { accent-color: var(--accent); }
+input, select, textarea { font: inherit; }
+.recharts-cartesian-grid line { stroke: var(--grid); }
+.recharts-text { fill: var(--muted); font-size: 11px; }
+.recharts-cartesian-axis-line, .recharts-cartesian-axis-tick-line { stroke: var(--axis); }
+.recharts-polar-grid-angle line, .recharts-polar-grid-concentric polygon { stroke: var(--grid); }
+.recharts-tooltip-cursor { fill: var(--line); }
+.recharts-wrapper:focus, .recharts-surface:focus { outline: none; }
+
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+.shimmer { background: linear-gradient(90deg, var(--raised) 25%, var(--line) 50%, var(--raised) 75%); background-size: 200% 100%; animation: shimmer 1.4s infinite; }
+@keyframes floaty { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(30px, -20px) scale(1.08); } }
+@keyframes waves { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.reduce-motion *, .reduce-motion *::before, .reduce-motion *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+@media print {
+  aside, header, .no-print { display: none !important; }
+  main { padding: 0 !important; }
+  body { background: white; }
+}

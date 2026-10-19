@@ -1,0 +1,23 @@
+// Rotating health quotes for the Today carousel (one every 10 s). "attributed" = popular attribution, origin uncertain.
+export const QUOTES = [
+  { text: 'Take care of your body. It’s the only place you have to live.', by: 'Jim Rohn' },
+  { text: 'The greatest wealth is health.', by: 'Virgil (attributed)' },
+  { text: 'Let food be thy medicine and medicine be thy food.', by: 'Hippocrates (attributed)' },
+  { text: 'It is health that is real wealth and not pieces of gold and silver.', by: 'Mahatma Gandhi' },
+  { text: 'We are what we repeatedly do. Excellence, then, is not an act, but a habit.', by: 'Will Durant' },
+  { text: 'Those who think they have no time for exercise will sooner or later have to find time for illness.', by: 'Edward Stanley (attributed)' },
+  { text: 'A healthy outside starts from the inside.', by: 'Robert Urich' },
+  { text: 'Sleep is the golden chain that ties health and our bodies together.', by: 'Thomas Dekker' },
+  { text: 'You don’t have to be extreme, just consistent.', by: 'Proverb' },
+  { text: 'Small daily improvements over time lead to stunning results.', by: 'Robin Sharma' },
+  { text: 'An ounce of prevention is worth a pound of cure.', by: 'Benjamin Franklin' },
+  { text: 'Every disease is the tip of an iceberg — fix what lies beneath the waterline.', by: 'The 198 principle' },
+  { text: 'Walking is man’s best medicine.', by: 'Hippocrates (attributed)' },
+  { text: 'The body achieves what the mind believes.', by: 'Proverb' },
+  { text: 'Health is a state of complete physical, mental and social well-being, and not merely the absence of disease.', by: 'WHO Constitution' },
+  { text: 'You can’t out-exercise a bad diet.', by: 'Proverb' },
+  { text: 'Motivation gets you started. Habit keeps you going.', by: 'Jim Ryun' },
+  { text: 'What gets measured gets managed.', by: 'Proverb' },
+  { text: 'The pinnacle of health is 99 small things done right, every single day.', by: 'The 198 principle' },
+  { text: 'Rest when you’re weary. Refresh and renew yourself, your body, your mind, your spirit.', by: 'Ralph Marston' },
+];
