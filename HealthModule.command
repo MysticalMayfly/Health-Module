@@ -61,7 +61,7 @@ cd "$APP"
 
 # 3. Install, build, start
 echo "📦 Installing dependencies (the first run takes a minute or two)…"
-npm install --no-fund --no-audit --loglevel=error
+npm install --no-fund --no-audit --no-update-notifier --loglevel=error
 echo "🛠  Building…"
 npm run build --silent > /dev/null
 
