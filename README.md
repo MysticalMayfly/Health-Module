@@ -24,7 +24,7 @@ npm start          # builds the client and serves everything on :3001
 
 On first launch you go through onboarding. Choose **"Explore with 180 days of demo data"** to see every dashboard populated.
 
-Requires **Node 22.5+**. It uses the built-in `node:sqlite`, so there's no native build step. Data lives in `./data/` by default; set `LIFEOS_DATA=/path` to change it.
+Requires **Node 22.13+**. It uses the built-in `node:sqlite`, so there's no native build step. Data lives in `./data/` by default; set `LIFEOS_DATA=/path` to change it.
 
 ## Architecture
 
